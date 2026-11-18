@@ -1,0 +1,31 @@
+.cartao {
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-left: 4px solid transparent;
+    border-radius: var(--raio);
+    padding: var(--espaco);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: calc(var(--espaco) / 2);
+  }
+  
+  .descricao {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+  }
+  
+  .Alta {
+    border-left-color: var(--cor-perigo);
+  }
+  
+  .Media,
+  .Média {
+    border-left-color: var(--cor-principal);
+  }
+  
+  .Baixa {
+    border-left-color: var(--cor-ok);
+  }

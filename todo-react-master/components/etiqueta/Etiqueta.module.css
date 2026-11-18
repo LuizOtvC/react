@@ -1,0 +1,23 @@
+.etiqueta {
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.1rem 0.6rem;
+    border-radius: 999px; /* valor bem alto = formato de "pílula" */
+    white-space: nowrap; /* impede o texto de quebrar linha */
+  }
+  
+  /* .etiqueta.alta (sem espaço) = elemento que tem AS DUAS classes */
+  .etiqueta.alta {
+    background: #fde3e1;
+    color: #a1231c;
+  }
+  
+  .etiqueta.media {
+    background: #fff1d6;
+    color: #7a5300;
+  }
+  
+  .etiqueta.baixa {
+    background: #e2f1e3;
+    color: #24652a;
+  }
