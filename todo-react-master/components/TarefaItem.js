@@ -13,6 +13,8 @@
 // por ListaDeTarefas (que é Client Component), ele também roda no
 // navegador — por isso o onChange funciona aqui.
 "use client";
+import { useState } from "react";
+
 const PRIORIDADES = {
   Alta: "Alta",
   Media: "Media",
@@ -21,10 +23,10 @@ const PRIORIDADES = {
 
 export default function TarefaItem({ tarefa, aoConcluir, aoExcluir, aoEditar }) {
   const [editando, setEditando] = useState(false);
-  const [TextDecoder, setTexto] = useState(tarefa.descricao);
+  const [Texto, setTexto] = useState(tarefa.descricao);
 
   const salvarEdicao = () =>{
-    const limpo = TextDecoder.trim();
+    const limpo = Texto.trim();
     if(limpo != ""){
  aoEditar(tarefa.id, limpo)
     }else{
@@ -49,7 +51,7 @@ export default function TarefaItem({ tarefa, aoConcluir, aoExcluir, aoEditar }) 
       {editando ? (
         <input
         className="editar"
-        value={texto}
+        value={Texto}
         onChange={(e) => setTexto(e.target.value)}
         onBlur={salvarEdicao}
         onKeyDown={teclaEdicao}

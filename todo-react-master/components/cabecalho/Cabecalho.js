@@ -11,20 +11,13 @@
 //
 // Exemplo de uso (em page.js):
 //   <Cabecalho titulo="To do List" subtitulo="Aula 23" />
-export default function Cabecalho({ titulo, subtitulo }) {
-  return (
-    // Em JSX usamos `className` no lugar de `class`, porque `class`
-    // é uma palavra reservada do JavaScript.
-    //
-    // `style` recebe um OBJETO JavaScript, por isso as chaves duplas:
-    //   - as chaves de fora {} dizem "aqui vem JavaScript";
-    //   - as chaves de dentro {} são o objeto em si.
-    // As propriedades CSS são escritas em camelCase (textAlign, e não
-    // text-align). Obs.: a classe .cabecalho no CSS já centraliza o
-    // texto, então este estilo inline é só um exemplo da sintaxe.
-    <header className="cabecalho" style={{ textAlign: "center" }}>
+
+import styles from "./Cabecalho.module.css";
+    export default function Cabecalho({ titulo, subtitulo }) {
+    return (
+    <header className={styles.cabecalho}>
+    <h1 className={styles.titulo}>{titulo}</h1>
       {/* Chaves {} dentro do JSX mostram o VALOR de uma variável */}
-      <h1>{titulo}</h1>
       <p>{subtitulo}</p>
     </header>
   );

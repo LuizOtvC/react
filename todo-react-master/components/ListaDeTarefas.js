@@ -10,7 +10,7 @@
 "use client";
 
 import { useState } from "react";
-import { tarefasIniciais } from "./dados"; // export nomeado → usa chaves
+import { colunas, tarefasIniciais } from "../dados/tarefas";
 import TarefaItem from "./TarefaItem"; // export default → sem chaves
 import FormTarefa from "./FormTarefa";
 

@@ -9,7 +9,7 @@
 // Importamos os componentes que vamos usar.
 // O "@/" é um atalho (alias) para a raiz do projeto, configurado
 // no jsconfig.json. Assim evitamos caminhos como "../../components".
-import Cabecalho from "@/components/Cabecalho";
+import Cabecalho from "@/components/cabecalho/Cabecalho";
 import ListaDeTarefas from "@/components/ListaDeTarefas";
 
 // Por padrão, componentes no App Router são SERVER COMPONENTS
